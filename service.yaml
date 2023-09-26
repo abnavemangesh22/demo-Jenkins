@@ -1,0 +1,10 @@
+---
+ - name: This is the first play
+   hosts: redhat
+   tasks:
+     - name: istallation of httpd
+       yum: name=httpd state=present
+     - name: service should start
+       service: name=httpd state=started
+     - name: user creation
+       user: name=ANZ state=present 
